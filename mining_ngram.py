@@ -69,7 +69,7 @@ def main(_):
 		ngram_sorted = sorted(ngram_idf, key=lambda item:item[1], reverse=True)
 		label_ngram_dict[key] = ngram_sorted
 
-	pkl.dump(label_ngram_dict, open(FLAGS.ouput_file, "wb"))
+	pkl.dump(label_ngram_dict, open(FLAGS.ouput_file+"_{}".format(FLAGS.ngram), "wb"))
 
 
 if __name__ == "__main__":
