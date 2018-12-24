@@ -30,6 +30,8 @@ def main(_):
 		for line in frobj:
 			corpus_lst.append(line.strip())
 
+	print("==Succeeded in reading file==", len(corpus_lst))
+
 	stop_word_lst = []
 	with open(FLAGS.stop_word_file, "r") as frobj:
 		for line in frobj:
